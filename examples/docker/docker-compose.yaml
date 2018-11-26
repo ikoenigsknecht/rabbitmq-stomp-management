@@ -1,0 +1,16 @@
+---
+version: '1'
+
+services:
+  rabbitmq:
+    image: 'ikoenig/rabbitmq-stomp-management:latest'
+    labels:
+      kompose.service.type: nodeport
+    ports:
+    - '4369:4369'
+    - '5671:5671'
+    - '5672:5672'
+    - '15672:15672'
+    - '25672:25672'
+    - '61613:61613'
+    - '61614:61614'
